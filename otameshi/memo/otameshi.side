@@ -1,0 +1,98 @@
+{
+  "id": "f52e2bac-fae3-4a0c-a37b-1de53b1918d9",
+  "version": "2.0",
+  "name": "otameshi",
+  "url": "https://www.hogehoge.go.jp",
+  "tests": [{
+    "id": "ae2ed408-710b-4c87-9d2e-6a8b59cc65a1",
+    "name": "search",
+    "commands": [{
+      "id": "bd2894c5-0648-41df-a871-b20946a61e6a",
+      "comment": "",
+      "command": "open",
+      "target": "/jma/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c98e0f78-564f-456e-a41f-67f92b9dfa6c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15fcda1a-a7a8-4a44-b03c-ccbc86341fbf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[@alt='防災情報']",
+      "targets": [
+        ["css=.hover img", "css:finder"],
+        ["xpath=//img[@alt='防災情報']", "xpath:img"],
+        ["xpath=//div[@id='atf-group']/ul/li/a/img", "xpath:idRelative"],
+        ["xpath=//li/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf88c373-8f8d-4e52-bc76-6276e3c0a756",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(2) > input",
+      "targets": [
+        ["css=form:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='bosaitop-header']/nav/div[4]/div[6]/form[2]/input", "xpath:idRelative"],
+        ["xpath=//form[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1279e45-fab9-4523-8819-80987fdd8a61",
+      "comment": "",
+      "command": "type",
+      "target": "css=form:nth-child(2) > input",
+      "targets": [],
+      "value": "東京"
+    }, {
+      "id": "87811c10-98c1-4c7c-8ff0-82e54bf15108",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=東京都",
+      "targets": [
+        ["linkText=東京都", "linkText"],
+        ["css=.area-search-list-item:nth-child(2) > .area-search-list-label", "css:finder"],
+        ["xpath=(//a[contains(text(),'東京都')])[2]", "xpath:link"],
+        ["xpath=//ul[@id='area-search-list']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//form[2]/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "19ace2df-af8c-410a-b7ce-8961d78d5ddf",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.breadcrumb-offices",
+      "targets": [
+        ["css=.breadcrumb-offices", "css:finder"],
+        ["xpath=//div[@id='bosaitop-area']/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div[7]/div/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'東京都の防災情報')]", "xpath:innerText"]
+      ],
+      "value": "東京都の防災情報"
+    }, {
+      "id": "d1390faf-3fc3-41a3-b787-54f22a12fe82",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "955x737",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4f8df6ea-a563-4bba-b9a6-67fbafb9eb9f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ae2ed408-710b-4c87-9d2e-6a8b59cc65a1"]
+  }],
+  "urls": ["https://www.jma.go.jp/"],
+  "plugins": []
+}
